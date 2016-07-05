@@ -1,6 +1,6 @@
 'use strict';
 
-function Eraser (dom, src) {
+function Cls (dom, src) {
 
   var $dom = $(dom);
   var top = $dom.offset().top;
@@ -55,7 +55,7 @@ function Eraser (dom, src) {
       var width = radius * 2;
       var height = radius * 2;
       var pattern = context.createPattern(img, "no-repeat");
-      context.roundRect(left, top, width, height, 100);
+      roundRect(context, left, top, width, height, 100);
       context.fillStyle = pattern;
       context.fill()
     })
